@@ -22,8 +22,9 @@ const BuyActionWindow = ({ uid }) => {
       price: stockPrice,
       mode: "BUY",
       });
+      console.log(resizeBy.data);
     }catch(err){
-      console.error("Order failed:")
+      console.error("Order failed:,",err)
     }
     closeBuyWindow();
   };
