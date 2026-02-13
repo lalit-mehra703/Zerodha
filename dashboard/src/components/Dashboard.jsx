@@ -9,10 +9,12 @@ import Positions from "./Positions";
 import Summary from "./Summary";
 import WatchList from "./WatchList";
 
+
 function Dashboard(){
     return(
         <div className="dashboard-container">
-        <WatchList />
+          
+         <WatchList />
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Summary />} />
