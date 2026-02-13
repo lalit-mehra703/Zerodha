@@ -1,0 +1,59 @@
+
+.nav-link{
+  margin-left: 40px;
+}
+
+.my-footer-container a{
+  text-decoration: none;
+}
+
+.my-mutes a{
+  color: rgb(114, 98, 98);
+  font-size: 14px;
+}
+.my-mutes{
+  line-height: 2.5rem;
+}
+
+.logo-margin{
+  margin-left: -40px;
+}
+
+.footer-extra{
+  justify-content: center;
+}
+
+.footer-extra li{
+  list-style-type: none;
+  margin: 14px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.footer-extra li:hover{
+  cursor: pointer;
+  color: blue;
+}
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+}
+
+#supportHero a{
+  color: white;
+  padding: 7px;
+  line-height: 2rem;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+#supportHero input{
+  padding: 8px 100px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
