@@ -178,7 +178,7 @@
   }
   
   .btn-blue {
-    background: #4184f3;
+    background: #239f2f;
   }
   
   /* sudo selectors */
@@ -188,7 +188,7 @@
     height: 3px;
     display: none;
     margin-top: 10px;
-    background-color: #4184f3;
+    background-color: #43d146;
   }
   
   .inputs fieldset:focus {
@@ -211,7 +211,7 @@
   }
   
   .btn-blue:hover {
-    background: #74a7fa;
+    background: #199d28;
   }
   
   .btn-grey:hover {
