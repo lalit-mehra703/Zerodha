@@ -177,7 +177,7 @@
     color: #666666;
   }
   
-  .btn-blue {
+  .btn-red {
     background: #d51c1c;
   }
   
@@ -210,7 +210,7 @@
     background-color: transparent;
   }
   
-  .btn-blue:hover {
+  .btn-red:hover {
     background: #f43c3c;
   }
   
