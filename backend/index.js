@@ -198,6 +198,11 @@ app.get('/addPositions',async(req,res)=>{
   res.send(allPositions);
 })
 
+app.get('/addOrders',async(req,res)=>{
+  let allOrders = await OrdersModel.find({});
+  res.send(allOrders);
+})
+
 app.post('/newOrder',async (req,res)=>{
   let newOrder = new OrdersModel({
     name : req.body.name,
