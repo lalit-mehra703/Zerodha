@@ -11,7 +11,7 @@ const Orders = () => {
   })
   return (
     <>
-    <h3 className="title">Holdings ({allOrders.length})</h3>
+    <h3 className="title">Orders ({allOrders.length})</h3>
 
       <div className="order-table">
         <table>
@@ -19,7 +19,7 @@ const Orders = () => {
             <th>Instrument</th>
             <th>Qty.</th>
             <th>Buy/Sell</th>
-            <th>Price</th>
+            <th>LTP</th>
           </tr>
 
           {allOrders.map((stock, index) => {
@@ -38,7 +38,6 @@ const Orders = () => {
     <div className="orders">
       <div className="no-orders">
         <p>You haven't placed any orders today</p>
-
         <Link to={"/"} className="btn">
           Get started
         </Link>
