@@ -36,7 +36,7 @@ const Login = () => {
         handleSuccess(message);
         setInputValue({ email: "", password: "" }); // reset only on success
         setTimeout(() =>{
-          window.location.href = "http://localhost:5174/";
+          window.location.href = "https://zerodha-dashboard-n7d1.onrender.com";
         }, 1000);
       } else {
         handleError(message);

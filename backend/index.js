@@ -22,7 +22,7 @@ const app = express();
 app.use(cors({
  origin:[
   "https://zerodha-app-wr6a.onrender.com",
-  "http://localhost:5174",
+  "https://zerodha-dashboard-n7d1.onrender.com",
 ],
  credentials:true
 }));
