@@ -1,6 +1,6 @@
 import Menu from "./Menu";
 
-function TopBar(){
+function TopBar({user}){
     return(
         <div className="" style={{width:"100%"}}>
             <div className="topbar-container">
@@ -16,7 +16,7 @@ function TopBar(){
                         <p className="percent"></p>
                     </div>
                 </div>
-            <Menu/>
+            <Menu user={user}/>
             </div>
         </div>
     );

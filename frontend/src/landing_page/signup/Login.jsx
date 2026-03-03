@@ -1,68 +1,58 @@
 import React, { useState } from "react";
-import "./login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./login.css";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const Signup = () => {
+const Login = () => {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState({
-    email: "",
-    username: "",
-    password: "",
-  });
+  const [inputValue, setInputValue] = useState({ email: "", password: "" });
 
-  // Update state on input change
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue((prev) => ({ ...prev, [name]: value }));
-    console.log("Input changed:", { ...inputValue, [name]: value });
   };
 
   const handleError = (msg) => toast.error(msg, { position: "bottom-left" });
-  const handleSuccess = (msg) => toast.success(msg, { position: "bottom-right" });
+  const handleSuccess = (msg) => toast.success(msg, { position: "bottom-left" });
 
-  // Submit form
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { email, username, password } = inputValue;
+    const { email, password } = inputValue;
 
-    // Frontend validation
-    if (!email || !username || !password) {
+    if (!email || !password) {
       return handleError("All fields are required");
     }
 
-    console.log("Submitting:", inputValue);
-
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/auth/signup",
+        "http://localhost:3002/auth/login",
         inputValue,
         { withCredentials: true }
       );
 
-      console.log("Backend response:", data);
-
-      if (data.success) {
-        handleSuccess(data.message);
-        setInputValue({ email: "", username: "", password: "" });
-        setTimeout(() => navigate("/"), 1000);
+      const { success, message } = data;
+      if (success) {
+        handleSuccess(message);
+        setInputValue({ email: "", password: "" }); // reset only on success
+        setTimeout(() =>{
+          window.location.href = "http://localhost:5174/";
+        }, 1000);
       } else {
-        handleError(data.message);
+        handleError(message);
       }
     } catch (error) {
-      console.error("Signup error:", error);
+      console.log(error);
       handleError(error.response?.data?.message || "Something went wrong");
     }
   };
 
   return (
     <div className="form_container">
-      <h2>Signup Account</h2>
+      <h2>Login Account</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             name="email"
@@ -72,17 +62,7 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label>Username</label>
-          <input
-            type="text"
-            name="username"
-            value={inputValue.username}
-            placeholder="Enter your username"
-            onChange={handleOnChange}
-          />
-        </div>
-        <div>
-          <label>Password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
@@ -93,7 +73,7 @@ const Signup = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to="/auth/login">Login</Link>
+          Don't have an account? <Link to="/auth/signup">Signup</Link>
         </span>
       </form>
       <ToastContainer />
@@ -101,4 +81,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

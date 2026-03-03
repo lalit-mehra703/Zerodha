@@ -1,11 +1,31 @@
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 import TopBar from "./TopBar";
 import Dashboard from "./Dashboard";
 
 function Home(){
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        axios.get("http://localhost:3002/auth/verify", {
+            withCredentials: true
+        })
+        .then(res => {
+            if (res.data.status) {
+                setUser(res.data.user);
+            } else {
+                window.location.href = "http://localhost:5173/";
+            }
+        })
+        .catch(() => {
+            window.location.href = "http://localhost:5173/";
+        });
+    }, []);
+
+    if (!user) return <h2>Loading...</h2>;
     return(
         <>
-            <TopBar/>
+            <TopBar user = {user}/>
             <Dashboard/>
         </>
     );

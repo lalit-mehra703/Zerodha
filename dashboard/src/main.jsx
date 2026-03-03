@@ -1,4 +1,5 @@
 import { StrictMode } from 'react'
+import { CookiesProvider } from "react-cookie";
 import './index.css';
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -7,6 +8,7 @@ import { GeneralContextProvider } from "./components/GeneralContext";
 
 
 createRoot(document.getElementById('root')).render(
+  <CookiesProvider>
   <BrowserRouter>
   <GeneralContextProvider>
     <Routes>
@@ -15,4 +17,5 @@ createRoot(document.getElementById('root')).render(
   </GeneralContextProvider>
       
   </BrowserRouter>
+  </CookiesProvider>
 )
