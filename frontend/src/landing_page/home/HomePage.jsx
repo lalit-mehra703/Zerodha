@@ -40,8 +40,7 @@ function HomePage() {
 
         setUsername(user);
 
-        // ✅ LOGIN hai → dusre origin pe bhejo
-        window.location.href = "http://localhost:5174/";
+        window.location.href = "https://zerodha-dashboard-n7d1.onrender.com";
 
       }
 
