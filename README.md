@@ -1,93 +1,67 @@
-Perfect Lucky 👍
-Agar tum auto login after signup set nahi karna chahte, to README me bhi woh mention nahi hona chahiye.
+<h1 align="center">📈 Zerodha Clone</h1>
 
-Main tumhe updated professional README de raha hoon — without auto login claim ✅
+<p align="center">
+A full-stack trading dashboard inspired by Zerodha, built using the MERN stack.
+Secure authentication, protected routes, and multi-origin architecture.
+</p>
 
-Tum direct copy-paste kar sakte ho.
+<p align="center">
+  <img src="https://img.shields.io/badge/MERN-Stack-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Auth-JWT-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-React%20(Vite)-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-Node%20%26%20Express-black?style=for-the-badge" />
+</p>
 
-🚀 Zerodha Clone
+---
 
-A full-stack Zerodha (Stock Trading Platform) Clone built using the MERN Stack with JWT authentication, multi-origin architecture, and protected dashboard routes.
+<h2>🚀 Features</h2>
 
-📌 Features
+<ul>
+  <li>🔐 JWT Authentication (Signup & Login)</li>
+  <li>🍪 HTTP-Only Cookie Based Session</li>
+  <li>🛡 Protected Dashboard Routes</li>
+  <li>👤 Profile Dropdown with Logout</li>
+  <li>📊 Trading Dashboard UI</li>
+  <li>🌐 Multi-Origin Setup (Auth App + Dashboard)</li>
+</ul>
 
-🔐 JWT Authentication (Signup & Login)
+---
 
-🍪 HTTP-Only Cookie Based Authentication
+<h2>🛠 Tech Stack</h2>
 
-🛡 Protected Dashboard Routes
+<b>Frontend:</b> React (Vite), React Router, Axios  
+<b>Backend:</b> Node.js, Express.js  
+<b>Database:</b> MongoDB (Mongoose)  
+<b>Authentication:</b> JWT, bcrypt, cookie-parser  
 
-👤 User Profile Dropdown with Logout
+---
 
-📊 Dashboard Sections (Orders, Holdings, Positions, Funds, Apps)
+<h2>📂 Project Structure</h2>
 
-🌐 Multi-Origin Setup (Frontend & Dashboard separated)
-
-⚡ Fast Vite + React Setup
-
-🛠 Tech Stack
-Frontend (Landing / Auth)
-
-React (Vite)
-
-React Router DOM
-
-Axios
-
-React Cookie
-
-Dashboard
-
-React
-
-Context API
-
-Protected Routes
-
-Dropdown UI with outside click detection
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB
-
-Mongoose
-
-JWT
-
-bcrypt
-
-cookie-parser
-
-CORS
-
-📂 Project Structure
+<pre>
 Zerodha/
 │
 ├── backend/
-│   ├── Controllers/
-│   ├── Middlewares/
-│   ├── Models/
-│   ├── Routes/
-│   └── server.js
-│
-├── frontend/      # Landing Page + Login + Signup
-│
-├── dashboard/     # Protected User Dashboard
-│
+├── frontend/   (Landing + Login + Signup)
+├── dashboard/  (Protected Trading Dashboard)
 └── README.md
-⚙️ Installation Guide
-1️⃣ Clone Repository
+</pre>
+
+---
+
+<h2>⚙️ Installation</h2>
+
+<h3>1️⃣ Clone Repository</h3>
+
+
 git clone https://github.com/lalit-mehra703/Zerodha.git
 cd Zerodha
-2️⃣ Backend Setup
+
+<h3>2️⃣ Backend Setup</h3>
 cd backend
 npm install
 
-Create a .env file:
+Create a <code>.env</code> file:
 
 PORT=3002
 MONGO_URI=your_mongodb_connection_string
@@ -96,7 +70,7 @@ TOKEN_KEY=your_secret_key
 Start backend:
 
 npm start
-3️⃣ Frontend Setup (Auth App)
+<h3>3️⃣ Frontend (Auth App)</h3>
 cd frontend
 npm install
 npm run dev
@@ -104,7 +78,7 @@ npm run dev
 Runs on:
 
 http://localhost:5173
-4️⃣ Dashboard Setup
+<h3>4️⃣ Dashboard</h3>
 cd dashboard
 npm install
 npm run dev
@@ -112,13 +86,13 @@ npm run dev
 Runs on:
 
 http://localhost:5174
-🔐 Authentication Flow
+<h2>🔐 Authentication Flow</h2>
 
 User signs up
 
 User logs in
 
-JWT token is generated
+JWT token generated
 
 Token stored in HTTP-only cookie
 
@@ -126,34 +100,9 @@ Dashboard verifies user via /auth/verify
 
 Protected routes render only if authenticated
 
-🌍 CORS Configuration
+<h2>👨‍💻 Author</h2>
 
-Backend allows requests from:
+<b>Lalit Mehra</b>
+<a href="https://github.com/lalit-mehra703">GitHub Profile</a>
 
-origin: [
-  "http://localhost:5173",
-  "http://localhost:5174"
-],
-credentials: true
-🚀 Future Improvements
-
-Auto Login After Signup
-
-Refresh Token System
-
-Token Expiry Handling
-
-Real-time Stock API Integration
-
-Responsive UI Enhancements
-
-Deployment (Render / Vercel / Railway)
-
-👨‍💻 Author
-
-Lalit Mehra
-GitHub: https://github.com/lalit-mehra703
-
-⭐ Support
-
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+<h2 align="center">⭐ If you like this project, consider giving it a star!</h2> ```
