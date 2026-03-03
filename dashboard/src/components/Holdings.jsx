@@ -10,7 +10,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3002/addHoldings').then((res) => {
+    axios.get(`${import.meta.env.VITE_API_URL}/addHoldings`).then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });

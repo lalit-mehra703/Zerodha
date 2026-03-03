@@ -37,7 +37,7 @@ const Signup = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/auth/signup",
+        `${import.meta.env.VITE_API_URL}/auth/signup`,
         inputValue,
         { withCredentials: true }
       );

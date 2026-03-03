@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:3002/addOrders').then((res)=>{
+    axios.get(`${import.meta.env.VITE_API_URL}/addOrders`).then((res)=>{
       setAllOrders(res.data);
     },[])
   })

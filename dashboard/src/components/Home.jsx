@@ -7,7 +7,7 @@ function Home(){
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:3002/auth/verify", {
+        axios.get(`${import.meta.env.VITE_API_URL}/auth/verify`, {
             withCredentials: true
         })
         .then(res => {

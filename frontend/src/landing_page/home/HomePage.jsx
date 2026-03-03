@@ -29,7 +29,7 @@ function HomePage() {
     try{
 
       const { data } = await axios.post(
-        "http://localhost:3002/auth/verify",
+        `${import.meta.env.VITE_API_URL}/auth/verify`,
         {},
         { withCredentials: true }
       );

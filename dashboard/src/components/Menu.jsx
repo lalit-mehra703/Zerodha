@@ -12,7 +12,7 @@ const Menu = ({user}) => {
 
   const [cookies, , removeCookie] = useCookies(["token"]);
 
-  const username = user || "User"; // backend se bhi la sakte ho
+  const username = user || "User";
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -22,7 +22,6 @@ const Menu = ({user}) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-  // ✅ Outside click close dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -37,7 +36,6 @@ const Menu = ({user}) => {
     };
   }, []);
 
-  // ✅ Logout
   const handleLogout = () => {
     removeCookie("token", {
       path: "/",
