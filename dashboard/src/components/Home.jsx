@@ -14,11 +14,11 @@ function Home(){
             if (res.data.status) {
                 setUser(res.data.user);
             } else {
-                window.location.href = "http://localhost:5173/";
+                window.location.href = "https://zerodha-app-wr6a.onrender.com";
             }
         })
         .catch(() => {
-            window.location.href = "http://localhost:5173/";
+            window.location.href = "https://zerodha-app-wr6a.onrender.com";
         });
     }, []);
 

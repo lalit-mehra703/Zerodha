@@ -42,7 +42,7 @@ const Menu = ({user}) => {
     });
 
     // Landing Page
-    window.location.href = "http://localhost:5173/";
+    window.location.href = "https://zerodha-app-wr6a.onrender.com";
   };
 
   const menuClass = "menu";
