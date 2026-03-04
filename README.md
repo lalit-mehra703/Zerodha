@@ -31,7 +31,7 @@ Secure authentication, protected routes, and multi-origin architecture.
 
 <h2>🛠 Tech Stack</h2>
 
-<b>Frontend:</b> React (Vite), React Router, Axios  
+<b>Frontend:</b> <br/>React (Vite), React Router, Axios  
 <b>Backend:</b> Node.js, Express.js  
 <b>Database:</b> MongoDB (Mongoose)  
 <b>Authentication:</b> JWT, bcrypt, cookie-parser  
