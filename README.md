@@ -1,4 +1,6 @@
-<h1 align="center">📈 Zerodha Clone</h1>
+<h1 align="center">📈 Zerodha Clone - Full Stack Tranding Platform</h1>
+
+🔗 Live Demo: https://zerodha-app-wr6a.onrender.com/
 
 <p align="center">
 A full-stack trading dashboard inspired by Zerodha, built using the MERN stack.
